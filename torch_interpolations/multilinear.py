@@ -11,7 +11,7 @@ class RegularGridInterpolator:
         self.points = points
         self.values = values
 
-        assert isinstance(self.points, tuple) or isinstance(self.points, list)
+        assert isinstance(self.points, (tuple, list))
         assert isinstance(self.values, torch.Tensor)
 
         self.ms = list(self.values.shape)
